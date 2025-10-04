@@ -1,3 +1,31 @@
+/* Greeting area styling */
+.greeting-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.greeting-message {
+  /* ...existing styles... */
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+
+.greeting-message.hide {
+  opacity: 0;
+}
+/* Greeting message styling */
+.greeting-message {
+  font-size: 1.25rem;
+  color: #0071c5;
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 113, 197, 0.08);
+}
 /* Modern reset */
 * {
   margin: 0;
