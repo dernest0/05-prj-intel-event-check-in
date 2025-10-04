@@ -17,21 +17,25 @@ form.addEventListener("submit", function (event) {
   const teamName = teamSelect.selectedOptions[0].text;
   console.log(name, teamName);
 
-  // increment count 
 
+  // increment count
   count++;
-  console.log("Total check-ins: ", count);
+  // Update attendee count in UI
+  const attendeeCount = document.getElementById("attendeeCount");
+  attendeeCount.textContent = count;
   // Update progress bar
-  const percentage = Math.round((count / maxCount) * 100) +"%";
+  const percentage = Math.round((count / maxCount) * 100) + "%";
+  const progressBar = document.getElementById("progressBar");
+  progressBar.style.width = percentage;
   console.log(`Progress: ${percentage}`);
 
   // Up the team counter
   const teamCounter = document.getElementById(team + "Count");
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1;
 
-  // Show welcome Message
-  const message  = `🎉 welcome, ${name} from ${teamName}`;
-  console.log(message);
+  // Show personalized greeting message
+  const greeting = document.getElementById("greeting");
+  greeting.textContent = `🎉 Welcome, ${name} from ${teamName}!`;
 
   form.reset();
 });
