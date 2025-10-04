@@ -38,7 +38,7 @@ function loadCounts() {
   const savedAttendees = localStorage.getItem("attendeeList");
   if (savedAttendees) {
     const attendees = JSON.parse(savedAttendees);
-    attendees.forEach(function(att) {
+    attendees.forEach(function (att) {
       const li = document.createElement("li");
       li.textContent = att.name;
       li.className = `attendee-item ${att.team}`;
@@ -55,7 +55,8 @@ function loadCounts() {
 
 window.addEventListener("DOMContentLoaded", loadCounts);
 // Ensure greeting message is always visible, even before check-in
-document.getElementById("greeting").textContent = "Welcome! Please check in below.";
+document.getElementById("greeting").textContent =
+  "Welcome! Please check in below.";
 
 // Handle form subbmission
 form.addEventListener("submit", function (event) {
@@ -121,9 +122,15 @@ form.addEventListener("submit", function (event) {
   // Check if attendee goal is reached
   if (count >= maxCount) {
     // Find the winning team
-    const waterCount = parseInt(document.getElementById("waterCount").textContent);
-    const zeroCount = parseInt(document.getElementById("zeroCount").textContent);
-    const powerCount = parseInt(document.getElementById("powerCount").textContent);
+    const waterCount = parseInt(
+      document.getElementById("waterCount").textContent
+    );
+    const zeroCount = parseInt(
+      document.getElementById("zeroCount").textContent
+    );
+    const powerCount = parseInt(
+      document.getElementById("powerCount").textContent
+    );
     let winningTeam = "";
     let winningEmoji = "";
     if (waterCount >= zeroCount && waterCount >= powerCount) {
