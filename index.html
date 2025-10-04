@@ -35,13 +35,13 @@
       </div>
     </div>
     <div class="container">
-  <!-- Greeting message area -->
-  <div class="greeting-area">
-    <p id="greeting" class="greeting-message"></p>
-  </div>
-  <!-- Check-in form -->
-  <form class="check-in" id="checkInForm">
-    <label for="attendeeName" class="form-label">Attendee Check-In</label>
+      <!-- Check-in form -->
+      <form class="check-in" id="checkInForm">
+        <!-- Greeting message area -->
+        <div class="greeting-area">
+          <p id="greeting" class="greeting-message"></p>
+        </div>
+        <label for="attendeeName" class="form-label">Attendee Check-In</label>
         <div class="form-group">
           <div class="input-wrapper">
             <input
@@ -64,8 +64,6 @@
         </div>
       </form>
 
-
-
       <!-- Team stats -->
       <div class="team-stats">
         <h3>Team Attendance</h3>
@@ -73,14 +71,23 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <div class="team-divider"></div>
+            <h4 class="attendee-list-title">Attendees</h4>
+            <ul id="waterAttendees" class="attendee-list"></ul>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <div class="team-divider"></div>
+            <h4 class="attendee-list-title">Attendees</h4>
+            <ul id="zeroAttendees" class="attendee-list"></ul>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <div class="team-divider"></div>
+            <h4 class="attendee-list-title">Attendees</h4>
+            <ul id="powerAttendees" class="attendee-list"></ul>
           </div>
         </div>
       </div>
