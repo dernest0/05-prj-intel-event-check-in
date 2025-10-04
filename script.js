@@ -30,7 +30,7 @@ form.addEventListener("submit", function (event) {
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1;
 
   // Show welcome Message
-  const message  = `welcome, ${name} from ${teamName}`;
+  const message  = `🎉 welcome, ${name} from ${teamName}`;
   console.log(message);
 
   form.reset();
